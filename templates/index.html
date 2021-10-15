@@ -111,17 +111,22 @@
                       <option value="cng">CNG</option>
                     </select><br></div> 
             </div>
-        <label for="Seller_Type_Individual">Owner type</label><br>
-            <select id="Seller_Type_Individual" name="Seller_Type_Individual" required="required">
-              <option value="dealer">Dealer</option>
-              <option value="individual">Individual</option>
-            </select><br>
-
-        <label id="rightColumn" for="Transmission_Mannual">Transmission type</label><br>
-            <select id="Transmission_Mannual" name="Transmission_Mannual" required="required">
-              <option value="mannual car">Mannual car</option>
-              <option value="automatic car">Automatic car</option>
-            </select><br>
+        <div class="row">
+            <div class="col-md-4">
+            <label for="Seller_Type_Individual">Owner type</label><br>
+                <select id="Seller_Type_Individual" name="Seller_Type_Individual" required="required">
+                  <option value="dealer">Dealer</option>
+                  <option value="individual">Individual</option>
+                </select><br>
+            </div>
+           <div class="col-md-8">
+            <label id="rightColumn" for="Transmission_Mannual">Transmission type</label><br>
+                <select id="Transmission_Mannual" name="Transmission_Mannual" required="required">
+                  <option value="mannual car">Mannual car</option>
+                  <option value="automatic car">Automatic car</option>
+                </select><br>
+            </div>
+         </div>
 
         <!-- submit button -->
         <input type="submit" value="Calculate Selling Price">
