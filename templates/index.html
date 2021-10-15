@@ -74,6 +74,19 @@
       background-size: cover;
       padding: 0px;
     }
+        
+    flex-container {
+    display: flex;
+    }
+        
+    flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+    }  
+
+    flex-child:first-child {
+    margin-right: 20px;
+    } 
 
     </style>
 </head>
@@ -111,15 +124,14 @@
                       <option value="cng">CNG</option>
                     </select><br></div> 
             </div>
-         <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-6">
+         <div class="flex-container"> 
+             <div class="flex-child magenta">
                 <label for="Seller_Type_Individual">Owner type</label><br>
                 <select id="Seller_Type_Individual" name="Seller_Type_Individual" required="required">
                   <option value="dealer">Dealer</option>
                   <option value="individual">Individual</option>
                 </select><br></div>
-                <div class="col-xs-6 col-sm-6 col-md-6">
+             <div class="flex-child magenta">
                 <label id="rightColumn" for="Transmission_Mannual">Transmission type</label><br>
                 <select id="Transmission_Mannual" name="Transmission_Mannual" required="required">
                   <option value="mannual car">Mannual car</option>
