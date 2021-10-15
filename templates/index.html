@@ -26,9 +26,6 @@
                 <h1>Welcome to Car Price Predictor</h1>
             </div>
             <div class="card-body">
-                <div class="col-12" style="text-align: center">
-                    <h5>This app predicts the price of a car you want to sell. Try filling the details below: </h5>
-                </div>
                 <br>
                 <form action="{{ url_for('predict')}}" method="post" style="background-color:transbox" align="left"  accept-charset="utf-8" name="Modelform">
                     <div class="col-md-10 form-group" style="text-align: center">
@@ -88,7 +85,7 @@
         </div>
     </div>
 </div>
-
+<h1>{{ prediction_text }}</h1>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
