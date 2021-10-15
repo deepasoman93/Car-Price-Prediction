@@ -1,83 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Car_Price_Prediction</title>
-        <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car_Price_Prediction</title>
+    <link href="style.css" rel="stylesheet">
 <!-- Adding styles like colour, height, width, border to our html page -->
-<style>
-input[type=text], select {
-  width: 80%;
-  padding: 20px 20px;
-  margin: 8px 0;
-  display: block;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-weight: bolder;
-}
+    <style>
+    input[type=text], select {
+      width: 80%;
+      padding: 20px 20px;
+      margin: 8px 0;
+      display: block;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-weight: bolder;
+    }
 
-input[type=submit] {
-  width: 80%;
-  background-color: orangered;
-  color:black;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size:100;
-  font-weight: bolder;
-}
+    input[type=submit] {
+      width: 80%;
+      background-color: orangered;
+      color:black;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size:100;
+      font-weight: bolder;
+    }
 
+    input[type=submit]:hover {
+      background-color: yellow;
+    }
 
-input[type=submit]:hover {
-  background-color: yellow;
-}
+    form{
+      border-radius: 10px;
+      padding-top: 5%;
+      font-weight: bolder;
+      padding: 40px;
+      text-align: left
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: auto auto;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #000;
+      position: left;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
 
-form{
-  border-radius: 10px;
-  padding-top: 5%;
-  font-weight: bolder;
-  padding: 40px;
-  text-align: left
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: auto auto;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #000;
-  position: left;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+    div {
+      border-radius: 5px;
+      width: 35%;
+    }
 
-div {
-  border-radius: 5px;
-  width: 35%;
-}
+    h1 {
+      color:#ff5555;
+      font-size: 40px;
+      font-weight: bolder;
+    }
 
-h1 {
-  color:#ff5555;
-  font-size: 40px;
-  font-weight: bolder;
-}
+    h3 {
+      color: greenyellow;
+    }
 
-h3 {
-  color: greenyellow;
-}
+    body {
+      background-image: url("static/img/car.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 0px;
+    }
 
-body {
-  background-image: url("static/img/car.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0px;
-}
-</style>
-
+    </style>
+</head>
 <body>
 
 <h1>Car Price Prediction</h1>
