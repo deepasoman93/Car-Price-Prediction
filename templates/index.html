@@ -60,7 +60,7 @@
     }
 
     h3 {
-      color: greenyellow;
+      color: white;
     }
 
     body {
@@ -93,6 +93,11 @@
 <body>
 
 <h1>Car Price Prediction</h1>
+     <div class="card-body">
+          <div class="col-12" style="text-align: center">
+               <h5>This app predicts the price of a car you want to sell. Try filling the details below: </h5>
+          </div>
+    </div>
 <div>
      <!-- Html form which will get all the values from user -->
      <form action="{{ url_for('predict')}}" method="post" style="background-color:transbox" align="left">
@@ -107,47 +112,38 @@
         <input type="text" id="Kms_Driven" name="Kms_Driven" placeholder="No.of Kilometers Drived" required="required"><br>
 
         <!-- drop down options are provided for the categorical features -->
-            <div class="row">
-                <div class="col-md-4">
-                <label for="Owner" style="color:white;">No. of owners</label><br>
-                    <select id="owner" name="Owner">
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                    </select><br></div>
-                <div class="col-md-8">
-                <label for="Fuel_Type_Petrol">Fuel</label><br>
-                    <select id="Fuel_Type_Petrol" name="Fuel_Type_Petrol" required="required">
-                      <option value="Petrol">Petrol</option>
-                      <option value="Diesel">Diesel</option>
-                      <option value="cng">CNG</option>
-                    </select><br></div> 
-            </div>
-         <div class="flex-container"> 
-             <div class="flex-child magenta">
-                <label for="Seller_Type_Individual">Owner type</label><br>
-                <select id="Seller_Type_Individual" name="Seller_Type_Individual" required="required">
-                  <option value="dealer">Dealer</option>
-                  <option value="individual">Individual</option>
-                </select><br></div>
-             <div class="flex-child magenta">
-                <label id="rightColumn" for="Transmission_Mannual">Transmission type</label><br>
-                <select id="Transmission_Mannual" name="Transmission_Mannual" required="required">
-                  <option value="mannual car">Mannual car</option>
-                  <option value="automatic car">Automatic car</option>
-                </select><br></div>
-         </div>
+         <label for="Owner" style="color:white;">No. of owners</label><br>
+               <select id="owner" name="Owner">
+                   <option value="0">0</option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+               </select><br>
+         
+         <label for="Fuel_Type_Petrol">Fuel</label><br>
+               <select id="Fuel_Type_Petrol" name="Fuel_Type_Petrol" required="required">
+                   <option value="Petrol">Petrol</option>
+                   <option value="Diesel">Diesel</option>
+                   <option value="cng">CNG</option>
+               </select><br>
+
+         <label for="Seller_Type_Individual">Owner type</label><br>
+             <select id="Seller_Type_Individual" name="Seller_Type_Individual" required="required">
+                 <option value="dealer">Dealer</option>
+                 <option value="individual">Individual</option>
+             </select><br>
+         
+         <label id="rightColumn" for="Transmission_Mannual">Transmission type</label><br>
+             <select id="Transmission_Mannual" name="Transmission_Mannual" required="required">
+                <option value="mannual car">Mannual car</option>
+                <option value="automatic car">Automatic car</option>
+             </select><br>
 
         <!-- submit button -->
         <input type="submit" value="Calculate Selling Price">
          <!-- the predicted text -->
-            <h1>{{ prediction_text }}</h1>
+            <h3>{{ prediction_text }}</h3>
     </form>
 </div>
-
-<!-- the predicted text -->
-<h1>{{ prediction_text }}</h1>
-
 </body>
 </html>
