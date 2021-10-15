@@ -76,69 +76,57 @@ body {
   background-size: cover;
   padding: 0px;
 }
-column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px;
-}
-row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 </style>
 
 <body>
 
 <h1>Car Price Prediction</h1>
-
 <div>
- <!-- Html form which will get all the values from user -->
- <form action="{{ url_for('predict')}}" method="post" style="background-color:transbox" align="left">
+     <!-- Html form which will get all the values from user -->
+     <form action="{{ url_for('predict')}}" method="post" style="background-color:transbox" align="left">
 
-<label for="Year" style="color:white;">Year of Purchase</label><br>
-<input type="text" id="Year" name="Year" placeholder="Enter the Year of Purchase" required="required"><br>
+        <label for="Year" style="color:white;">Year of Purchase</label><br>
+        <input type="text" id="Year" name="Year" placeholder="Enter the Year of Purchase" required="required"><br>
 
-<label for="Present_Price" style="color:white;">Showroom Price(eg: 10.5)</label><br>
-<input type="text" id="Present_Price" name="Present_Price" placeholder="Purchased Price in lakhs(10.5)" required="required"><br>
+        <label for="Present_Price" style="color:white;">Showroom Price(eg: 10.5)</label><br>
+        <input type="text" id="Present_Price" name="Present_Price" placeholder="Purchased Price in lakhs(10.5)" required="required"><br>
 
-<label for="Kms_Driven" style="color:white;">Kilometers Drived</label><br>
-<input type="text" id="Kms_Driven" name="Kms_Driven" placeholder="No.of Kilometers Drived" required="required"><br>
+        <label for="Kms_Driven" style="color:white;">Kilometers Drived</label><br>
+        <input type="text" id="Kms_Driven" name="Kms_Driven" placeholder="No.of Kilometers Drived" required="required"><br>
 
-<!-- drop down options are provided for the categorical features -->
-<div class="row">
-    <div class="column">
-    <label for="Owner" style="color:white;">No. of owners</label><br>
-        <select id="owner" name="Owner">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select><br></div>
-    <div class="column">
-    <label for="Fuel_Type_Petrol">Fuel</label><br>
-        <select id="Fuel_Type_Petrol" name="Fuel_Type_Petrol" required="required">
-          <option value="Petrol">Petrol</option>
-          <option value="Diesel">Diesel</option>
-          <option value="cng">CNG</option>
-        </select><br></div> 
-</div>
-<label for="Seller_Type_Individual">Owner type</label><br>
-    <select id="Seller_Type_Individual" name="Seller_Type_Individual" required="required">
-      <option value="dealer">Dealer</option>
-      <option value="individual">Individual</option>
-    </select><br>
+        <!-- drop down options are provided for the categorical features -->
+        <div class="row">
+            <div class="column">
+            <label for="Owner" style="color:white;">No. of owners</label><br>
+                <select id="owner" name="Owner">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select><br></div>
+            <div class="column">
+            <label for="Fuel_Type_Petrol">Fuel</label><br>
+                <select id="Fuel_Type_Petrol" name="Fuel_Type_Petrol" required="required">
+                  <option value="Petrol">Petrol</option>
+                  <option value="Diesel">Diesel</option>
+                  <option value="cng">CNG</option>
+                </select><br></div> 
+        </div>
+        <label for="Seller_Type_Individual">Owner type</label><br>
+            <select id="Seller_Type_Individual" name="Seller_Type_Individual" required="required">
+              <option value="dealer">Dealer</option>
+              <option value="individual">Individual</option>
+            </select><br>
 
-<label id="rightColumn" for="Transmission_Mannual">Transmission type</label><br>
-    <select id="Transmission_Mannual" name="Transmission_Mannual" required="required">
-      <option value="mannual car">Mannual car</option>
-      <option value="automatic car">Automatic car</option>
-    </select><br>
+        <label id="rightColumn" for="Transmission_Mannual">Transmission type</label><br>
+            <select id="Transmission_Mannual" name="Transmission_Mannual" required="required">
+              <option value="mannual car">Mannual car</option>
+              <option value="automatic car">Automatic car</option>
+            </select><br>
 
-<!-- submit button -->
-<input type="submit" value="Calculate Selling Price">
-</form>
+        <!-- submit button -->
+        <input type="submit" value="Calculate Selling Price">
+    </form>
 </div>
 
 <!-- the predicted text -->
